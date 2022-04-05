@@ -6,7 +6,14 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ICoder acoder = new ACoder();
+            ICoder bcoder = new BCoder();
+
+            string input = "Привет";
+            string a = acoder.Encode(input);
+            string b = bcoder.Encode(input);
+            string outputa = acoder.Decode(a);
+            string outputb = bcoder.Decode(b);
         }
     }
 }
