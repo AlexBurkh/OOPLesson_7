@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Task2.interfaces;
+
 namespace Task2
 {
-    public class Circle : Point
+    public class Circle : Point, ISquareCalculable
     {
         #region Конструкторы
         public Circle(Int32 x, Int32 y, UInt32 radius, Color color, Boolean visible)
@@ -22,7 +24,7 @@ namespace Task2
 
         private UInt32 _radius;
 
-        public override Double CalcSquare()
+        public Double CalcSquare()
         {
             return Math.PI * _radius * _radius;
         }

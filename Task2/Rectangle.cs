@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Task2.interfaces;
+
 namespace Task2
 {
-    public class Rectangle : Point
+    public class Rectangle : Point, ISquareCalculable
     {
         #region Конструкторы
         public Rectangle() : this(0, 0, 1, 1, Color.red, false) { }
@@ -24,7 +26,7 @@ namespace Task2
         private UInt32 _height;
         private UInt32 _width;
 
-        public override Double CalcSquare()
+        public Double CalcSquare()
         {
             return _height * _width;
         }

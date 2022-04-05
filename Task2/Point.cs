@@ -35,9 +35,5 @@ namespace Task2
                    $"Цвет: {_color}\n" +
                    $"Видимость: {IsVisible()}\n";
         }
-        public virtual Double CalcSquare()
-        {
-            return 0;
-        }
     }
 }
